@@ -1,6 +1,7 @@
 import Notiflix from 'notiflix';
 import { markup } from './markup';
 import refs from './refs';
+import { upgreatMarkup } from './upgreate-murkup';
 
 export function fetchCountries(name) {
   fetch(
@@ -8,9 +9,7 @@ export function fetchCountries(name) {
   )
     .then(response => {
       if (!response.ok) {
-        // upgreatMarkup(refs.list.innerHTML, refs.info.innerHTML);
-        refs.info.innerHTML = '';
-        refs.list.innerHTML = '';
+        upgreatMarkup(refs.list.innerHTML, refs.info.innerHTML);
         throw new Error(response.status);
       }
       return response.json();
