@@ -8,6 +8,7 @@ Notiflix.Notify.init({
   width: '280px',
   position: 'center-top',
   opacity: 1,
+  timeout: 1500,
 });
 
 export function markup(data) {
@@ -18,7 +19,7 @@ export function markup(data) {
     upgreatMarkup(refs.list.innerHTML, refs.info.innerHTML);
     refs.list.insertAdjacentHTML('beforeend', createListCountries(data));
   } else {
-    upgreatMarkup(refs.list.innerHTML, refs.info.innerHTML);
+    upgreatMarkup(true, true);
     Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
