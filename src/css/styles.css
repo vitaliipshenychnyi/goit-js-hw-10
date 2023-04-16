@@ -30,5 +30,21 @@ ul {
 .country-item {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.country-name {
+  margin-bottom: 16px;
+  margin-top: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0;
+}
+
+.country-item p {
+  margin-bottom: 0;
 }
